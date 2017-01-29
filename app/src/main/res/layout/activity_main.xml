@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp">
+    <TextView
+        android:text="AlcoTime"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:gravity="center" />
+    </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:gravity="center"
+       android:paddingBottom="60dp"
+       android:weightSum="1">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="190dp"
+        app:srcCompat="@drawable/capture"
+        android:id="@+id/imageButton"
+        android:layout_weight="0.43" />
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:weightSum="1">
+
+        <Button
+            android:text="Connexion"
+            android:textSize="30dp"
+            android:textColor="@android:color/background_light"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonConnexion"
+            android:background="@android:color/holo_red_light"
+
+            />
+
+        <Button
+            android:text="Inscription "
+            android:textSize="30dp"
+            android:textColor="@android:color/background_light"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonInscription"
+            android:background="@android:color/holo_blue_bright"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
