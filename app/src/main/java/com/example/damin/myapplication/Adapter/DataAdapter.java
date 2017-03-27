@@ -1,4 +1,4 @@
-package com.example.damin.myapplication;
+package com.example.damin.myapplication.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.damin.myapplication.AndroidVersion;
+import com.example.damin.myapplication.NextActivity;
+import com.example.damin.myapplication.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

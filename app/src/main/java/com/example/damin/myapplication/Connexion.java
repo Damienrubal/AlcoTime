@@ -14,8 +14,6 @@ import android.widget.TextView;
 import com.example.damin.myapplication.DataBase.PersonTableFeatures;
 import com.example.damin.myapplication.DataBase.PersonTableHelper;
 
-import org.w3c.dom.Text;
-
 /**
  * Created by damin on 25/01/2017.
  */
@@ -30,7 +28,7 @@ public class Connexion extends Activity {
 
         //si pas final , ne foncitonne pas , why ?
         final EditText name = (EditText)findViewById(R.id.name);
-        final TextView nope= (TextView) findViewById(R.id.nope);
+        final TextView nope= (TextView) findViewById(R.id.nope) ;
 
 
        //For the DataBase
@@ -53,7 +51,7 @@ public class Connexion extends Activity {
                 Log.d("GETEXT",result);
                 bool=personTableFeatures.ApplicationConnexion(result);
                 if (bool) {
-                    Intent myIntent = new Intent(Connexion.this, PersonalActivity.class);
+                    Intent myIntent = new Intent(Connexion.this, Main2Activity.class);
                     startActivity(myIntent);
                 }
                 else

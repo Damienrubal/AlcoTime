@@ -1,19 +1,26 @@
-package com.example.damin.myapplication;
+package com.example.damin.myapplication.Fragment;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.example.damin.myapplication.Adapter.DataAdapter;
+import com.example.damin.myapplication.AndroidVersion;
+import com.example.damin.myapplication.R;
 
 import java.util.ArrayList;
 
 /**
- * Created by damin on 13/01/2017.
+ * Created by damin on 27/03/2017.
  */
 
-public class AlcoolActivity extends Activity {
+public class Fragment2 extends Fragment {
+
 
     private final String android_version_names[] = {
             "Vodka",
@@ -43,24 +50,44 @@ public class AlcoolActivity extends Activity {
     };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alcool);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        initViews();
+        return inflater.inflate(R.layout.activity_alcool, container, false);
+
+
+
     }
 
-    private void initViews(){
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.card_recycler_view);
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+       RecyclerView recyclerView = (RecyclerView)view.findViewById(R.id.card_recycler_view);
         recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
         ArrayList<AndroidVersion> androidVersions = prepareData();
-        DataAdapter adapter = new DataAdapter(getApplicationContext(),androidVersions);
+        DataAdapter adapter = new DataAdapter(getActivity(),androidVersions);
         recyclerView.setAdapter(adapter);
 
+       // initViews();
+
+
     }
+
+
+    /*private void initViews(){
+
+       recyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+
+        ArrayList<AndroidVersion> androidVersions = prepareData();
+        DataAdapter adapter = new DataAdapter(getActivity(),androidVersions);
+        recyclerView.setAdapter(adapter);
+
+    }*/
     private ArrayList<AndroidVersion> prepareData(){
 
         ArrayList<AndroidVersion> android_version = new ArrayList<>();
