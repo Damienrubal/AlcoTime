@@ -1,11 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.damin.myapplication.Main2Activity">
 
-    <TextView
-        android:text="Fragment 1"
-        android:layout_width="match_parent"
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/uber"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView4" />
-</LinearLayout>
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_stat_name"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/conseil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_conso"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/favori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_stat_favori"
+        />
+    
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:src="@drawable/loic"
+            app:civ_border_width="2dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:text="Votre taux d'alcoolémie actuel:  0.25"
+            android:textStyle="italic"
+            android:textAppearance="@style/Base.ThemeOverlay.AppCompat.Dark"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:text="Votre consommation à 20h15 : Wiskey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"/>
+
+        <TextView
+            android:text="Votre consommation à 20h00 : Rhum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"/>
+
+        <TextView
+            android:text="Votre consommation à 19h30 : Rhum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
